@@ -1,0 +1,49 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#Trashoon{
+    font-size: 30px;
+}
+
+.home {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+#img-1-pollutedBeach{
+    object-fit: cover;
+    width: 100%;
+    height: 50em;
+}
+
+#img-2-holdingHands{
+    object-fit: cover;
+    width: 100%;
+    height: 50em;
+}
+
+#img-3-Team {
+    object-fit: cover;
+    width: 100%;
+    height: 50em;
+}
+
+#map1{
+    align-items: center;
+    align-content: center;
+    height: 40em;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+}
+
+.landing-text {
+
+}
