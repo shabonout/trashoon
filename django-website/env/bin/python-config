@@ -1,4 +1,4 @@
-#!/home/shab/Desktop/CSE_HACK/env/bin/python
+#!/home/shab/Desktop/trashoon/django-website/env/bin/python
 
 import sys
 import getopt
