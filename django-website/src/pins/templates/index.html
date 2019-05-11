@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App</title>
+</head>
+<body>
+	<h1>This is our list of pins</h1>
+	{% for pin in pin_objects %}
+		<img src="{{ pin.imgurl }}" width=300px height=210px>
+	{% endfor %}
+	
+</body>
+</html>
