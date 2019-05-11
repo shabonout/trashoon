@@ -10,5 +10,5 @@ def pins_view(request): # the request means: whenever someone goes to the URL
 	# Context dictionary with 'KEY': VALUE
 		'pin_objects': pin_objects
 	}
-	return render(request, "index.html", context) # Render function to render the page
+	return render(request, "WebPage.html", context) # Render function to render the page
 

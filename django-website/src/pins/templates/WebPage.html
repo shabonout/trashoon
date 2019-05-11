@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intitial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
     <title>TRASHOON</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-light">
         <a class="navbar-brand" href="#" id="Trashoon">
-         <img src="../resources/trashoon.png" width="50" height="50" class="d-inline-block align-top" alt="">
+         <img src="{% static 'resources/trashoon.png' %}" width="50" height="50" class="d-inline-block align-top" alt="">
         Trashoon
         </a>
         <div class="navbar-collapse" id="navbarSupportedContent">
@@ -30,7 +31,7 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" id="home">
         <div class="carousel-inner" >
             <div class="carousel-item active" >
-                <img id="img-1-pollutedBeach"  src="../resources/beachWaste.jpg" class="img-fluid" alt="Responsive image">
+                <img id="img-1-pollutedBeach"  src="{% static 'resources/beachWaste.jpg' %}" class="img-fluid" alt="Responsive image">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
                         hi team
@@ -38,7 +39,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img id="img-2-holdingHands"  src="../resources/holding-hands.jpeg" class="image-fluid" alt="Second slide">
+                <img id="img-2-holdingHands"  src="{% static 'resources/holding-hands.jpeg' %}" class="image-fluid" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
                         hello
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img id="img-3-Team" src="../resources/TeamJPG.jpg" class="image-fluid" alt="Third slide">
+                <img id="img-3-Team" src="{% static 'resources/TeamJPG.jpg' %}" class="image-fluid" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
                         hello
