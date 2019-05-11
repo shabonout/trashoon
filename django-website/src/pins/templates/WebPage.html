@@ -86,10 +86,25 @@
     <script>
         var map;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+            var startPoint= {lat: 30, lng: 0};
+            var mapOptions = {
+              zoom: 2.7,
+              center: startPoint,
+              mapTypeId: 'satellite'
+            };
+
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            var arrayMarkers = [];
+
+            {% for pin in pin_objects %}
+                var marker = new google.maps.Marker({
+                position: {lat: {{ pin.latitude }}, lng: {{ pin.longitude }}},
+                map: map,
+                title: 'Hello World!'
             });
+            arrayMarkers.push(marker);
+            {% endfor %}
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeXiFwXObyMfJ8N7KXXplkBc4VU0q2zQk&callback=initMap"
