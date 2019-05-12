@@ -13,11 +13,9 @@ html, body{
 }
 
 .jumbotron{
+    background-color: #f2a104;
+}
 
-}
-#logo {
-    background: #ffffff;
-}
 
 .home {
     display: table;
