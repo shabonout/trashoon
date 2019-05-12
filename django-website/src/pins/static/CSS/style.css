@@ -61,3 +61,17 @@ html, body{
 .landing-text {
 
 }
+
+
+.animation {
+  animation-name: slide;
+  animation-duration: 1s;
+  margin-left: 0%;
+}
+
+
+@keyframes slide {
+ from {  margin-left: 100%;}
+ to { margin-left: 50%;}
+    
+}
