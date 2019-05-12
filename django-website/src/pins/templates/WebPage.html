@@ -193,7 +193,7 @@
 
                 google.maps.event.addListener(marker, 'mouseover', (function(marker, j) {
                      return function() {
-                         infowindow.setContent('<img src="'+arrayMarkers[j][0]+'" widrth=100px height=100px>');
+                         infowindow.setContent('<img src="'+arrayMarkers[j][0]+'" widrth=100px height=300px>');
                          infowindow.open(map, marker);
                      }
                 })(marker, j));
