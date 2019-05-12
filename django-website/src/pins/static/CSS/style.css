@@ -3,6 +3,8 @@ html, body{
     width: 100%;
     background-image: url("../resources/baclgroundColour.jpg");
 }
+a { color: inherit; } 
+a:hover { color: inherit; }
 
 .titles{
     font-family: "Lato"
