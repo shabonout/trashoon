@@ -80,9 +80,18 @@
             </div>
         </div>
     </div>
-    <div id="map">
-        <h1>hello</h1>
+    
+    <div style="position: relative;top:0px">
+        <div id="close_page" style="height:30px;width:30px;position:absolute;left:95%;top:0px;z-index:11;visibility: hidden;">
+            <img src="{% static 'resources/x.png' %}" width=100% height=100%>
+            </div>
+        <div id="details_page" style="background: lime;opacity:0.8;width:100%;height:58.3em;position:absolute;top:0px;z-index:10;visibility: hidden">
+           
+        </div>
     </div>
+    <div id="map" style="position:relative;top:0px;z-index:0"></div>
+
+
     <script>
         var map;
         function initMap() {
@@ -99,7 +108,7 @@
             var arrayMarkers = new Array({{nobjects}});
             var infowindow = new google.maps.InfoWindow;
             {% for pin in pin_objects %}
-                arrayMarkers[i]=["{{ pin.imgurl }}", {{ pin.latitude }}, {{ pin.longitude }}]; 
+                arrayMarkers[i]=["{{ pin.imgurl }}", {{ pin.latitude }}, {{ pin.longitude }},"{{ pin.title}}","{{ pin.description }}","{{ pin.website }}","{{ pin.date }}"]; 
                 i++;
             {% endfor %}
             
@@ -122,10 +131,43 @@
                          infowindow.close(map, marker);
                      }
                 })(marker, j));
+
+                google.maps.event.addListener(marker, 'click', (function(marker, j) {
+                     return function() {
+                         document.getElementById('details_page').style.visibility="visible";
+                         document.getElementById('close_page').style.visibility="visible";
+                         document.getElementById('details_page').innerHTML=arrayMarkers[j][3]
+                         +
+                         "<br><br>"
+                         +
+                         "<img src=\""+arrayMarkers[j][0]+"\">"
+                         +
+                         "<br>"
+                         +
+                         arrayMarkers[j][4]
+                         +
+                         "<br><br>"
+                         +
+                         arrayMarkers[j][5]
+                         +
+                         "<br><br>"
+                         +
+                         arrayMarkers[j][6]
+                         
+                         ;
+                     }
+                })(marker, j));
             }
 
-            }
+        }
 
+    </script>
+
+    <script>
+        document.getElementById('close_page').addEventListener('click', function (event) {
+            document.getElementById('details_page').style.visibility="hidden";
+            document.getElementById('close_page').style.visibility="hidden";
+        });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeXiFwXObyMfJ8N7KXXplkBc4VU0q2zQk&callback=initMap"
             async defer></script>
