@@ -1,10 +1,22 @@
 html, body{
     height: 100%;
     width: 100%;
+    background-image: url("../resources/baclgroundColour.jpg");
 }
 
 #Trashoon{
     font-size: 30px;
+}
+
+.navbar{
+    background: #FFCF79;
+}
+
+.jumbotron{
+
+}
+#logo {
+    background: #ffffff;
 }
 
 .home {
@@ -43,6 +55,8 @@ html, body{
 #map {
     height: 100%;
 }
+
+#top-jumbotron { border: 2rem; }
 
 .landing-text {
 

@@ -6,26 +6,20 @@
     <meta name="viewport" content="width=device-width, intitial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <title>TRASHOON</title>
+    <title>TRACKOON</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-sm bg-light" style="margin-bottom: 10rem; content:">
         <a class="navbar-brand" href="#" id="Trashoon">
-         <img src="{% static 'resources/trashoon.png' %}" width="50" height="50" class="d-inline-block align-top" alt="">
-        Trashoon
+         <img id="logo" src="{% static 'resources/trashoon.png' %}" width="80" height="80" class="d-inline-block align-top" alt="logo">
+        TRACKOON
         </a>
-        <div class="navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">What we do <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+        <div class="navbar-collapse" id="navbarSupportedContent" style="width: 80%; height: 60%" >
+            <nav class="nav nav-pills nav-justified" style="width: 80%">
+                <a class="nav-item nav-link active" style="margin: 1px" href="#">Map</a>
+                <a class="nav-item nav-link active" style="margin: 1px" href="#">Our Work</a>
+                <a class="nav-item nav-link active" style="margin: 1px" href="#">About Us</a>
+            </nav>
         </div>
     </nav>
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" id="home">
@@ -34,24 +28,27 @@
                 <img id="img-1-pollutedBeach"  src="{% static 'resources/beachWaste.jpg' %}" class="img-fluid" alt="Responsive image">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
-                        hi team
+                        Check our map to see nearby places that can be cleaned
                     </h5>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369044 ">Go To Map</button>
                 </div>
             </div>
             <div class="carousel-item">
                 <img id="img-2-holdingHands"  src="{% static 'resources/holding-hands.jpeg' %}" class="image-fluid" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
-                        hello
+                        Learn more about our goals and how Trackoon works
                     </h5>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369044 ">Our Work</button>
                 </div>
             </div>
             <div class="carousel-item">
                 <img id="img-3-Team" src="{% static 'resources/TeamJPG.jpg' %}" class="image-fluid" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>
-                        hello
+                        Learn more about the developing team
                     </h5>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369044 ">About Us</button>
                 </div>
             </div>
         </div>
@@ -64,23 +61,64 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="padding">
-        <div class="container">
+    <div id="OurWork" class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 10rem; align-content: center; padding: 5%" >
+        <center>
+            <h2>
+                What is Trackoon
+            </h2>
+            <p class="p" style="width: 60%">
+                Have you ever looked at the news about climate change and environmental issues and wondered, “But how can I make a difference? How do I help?”
+                In our opinion, no contribution is too small, especially when there’s almost 8 billion people on the planet who can help. And what can just about anyone do?
+                Pick up litter!
+                Try clicking on a point close to you and see how it looks. Is there a lot of litter? Do you feel like you’d like to contribute to cleanup efforts? Grab a bag, some gloves, and go!
+                Helping the environment is as easy as that. If you wanna show off your good work, take a photo and tag the location so it’ll be added to our map!
+            </p>
+        </center>
+    </div>
+    <img src="../static/resources/cleaning.JPG" style="width: 100%; object-fit: cover"; height=600px"/>
+    <div class="jumbotron text-jumbo" style="margin-bottom: 0rem; margin-top: 0rem; align-content: center" >
+        <center>
+            <p class="p" style="width: 60%">
+                Thanks to the help of Google’s Maps and Image Recognition APIs, we take information from public posts, think Facebook, Instagram, online news articles, anything and everything, and we scan these photos for images of places with litter. Once we’ve identified these photos of litter, we take all the information we can from the photographs themselves, the time and date, location, etc, and we compile this information into our constantly updated map. Areas we’ve detected with litter are then visible as points on the map. You can even see the progress of an area!
+
+            </p>
+        </center>
+    </div>
+
+    <div class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 0rem; align-content: center; padding:2%" >
+        <center>
+            <h2>
+                TRACKOON Map
+            </h2>
+            </p>
+        </center>
+    </div>
+    <div id="map" style="margin-bottom: 10rem">
+        <h1>hello</h1>
+    </div>
+
+    <div class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 10rem; align-content: center; padding: 5%" >
+        <center>
+            <h2>
+                About Us
+            </h2>
             <div class="row">
-                <div class="col-sm-6">
-                    <h1>
-                        here goes the map!
-                    </h1>
+                <div class="col-4">
+                <p class="p" style="width: 100%; font-size: 26px">
+                    Our team consists of 4 first year students, Hassan Mualla, Shab Pompeiano, Nafen Haj Ahmed, Hannah Maltkvist in the Software Engineering and Management Program at Gothenburg University.
+                </p>
+                <p style="font-size: 26px">
+                    The members of this team have participated in more than 10 Hackathons and workshops. Engaging, interacting with, and solving any problem or scenario we face while hacking, we just can't get enough :)
+                </p>
                 </div>
-                <div class="col-sm-6 text-center">
-                    <h1>
-                        Here goes point on map description
-                    </h1>
+                <div class="col-8">
+                <img src="../static/resources/TeamJPG.jpg" alt="Team" style="object-fit: inherit; width: 100%; "/>
                 </div>
             </div>
-        </div>
+
+        </center>
     </div>
-    
+                                                                                                                
     <div id="container_page" style="position: relative;top:0px;left:50%;visibility:hidden;width:50%">
         <div id="close_page" style="height:30px;width:30px;position:absolute;left:95%;top:0px;z-index:11;">
             <img src="{% static 'resources/x.png' %}" width=100% height=100%>
@@ -89,8 +127,34 @@
            
         </div>
     </div>
-    <div id="map" style="position:relative;top:0px;z-index:0"></div>
+    <div id="map" style="position:relative;top:0px;z-index:0"></div>                                                                                                        
 
+    <footer class="page-footer font-small teal pt-4" style="background: #6DDCBD; margin-top: 20rem">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <img src="../static/resources/ericsson.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-2">
+                    <img src="../static/resources/original.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-2">
+
+                </div>
+                <div class="col-2">
+                    <img src="../static/resources/ctrlAlt.png" alt="" style="width: 100%;">
+                </div>
+                <div class="col-2">
+                    <img src="../static/resources/fb3.png" alt="" style="width: 100%;">
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3" style="background: #5b80b2">
+            It's FOSS!!
+        </div>
+    </footer>
 
     <script>
         var map;
