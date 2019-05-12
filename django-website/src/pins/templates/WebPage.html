@@ -10,15 +10,15 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-light" style="margin-bottom: 10rem">
-        <a class="navbar-brand" href="#" id="Trashoon"  style="color: #00743f">
+        <a class="navbar-brand" href="#" id="Trashoon"  style="color: #369004">
          <img id="logo" src="{% static 'resources/trashoon.png' %}" width="80" height="80" style="" class="d-inline-block align-top" alt="logo">
         TRACKOON
         </a>
         <div class="navbar-collapse" id="navbarSupportedContent" style="width: 80%; height: 60%" >
             <nav class="nav nav-pills nav-justified" style="width: 80%">
-                <a class="nav-item nav-link active" style="margin: 1px; background: #00743f" href="#">Map</a>
-                <a class="nav-item nav-link active" style="margin: 1px; background: #00743f" href="#">Our Work</a>
-                <a class="nav-item nav-link active" style="margin: 1px; background: #00743f" href="#">About Us</a>
+                <a class="nav-item nav-link active" style="margin: 1px; background: #369004" href="#mapMarker">Map</a>
+                <a class="nav-item nav-link active" style="margin: 1px; background: #369004" href="#OurWork">Our Work</a>
+                <a class="nav-item nav-link active" style="margin: 1px; background: #369004" href="#aboutUS">About Us</a>
             </nav>
         </div>
     </nav>
@@ -30,7 +30,7 @@
                     <h5>
                         Check our map to see nearby places that can be cleaned
                     </h5>
-                    <button type="button" class="btn btn-primary btn-lg" style="background: #00743f ">Go To Map</button>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369004" onclick="window.location.href= '#mapMarker' ">Go To Map</button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -39,7 +39,7 @@
                     <h5>
                         Learn more about our goals and how Trackoon works
                     </h5>
-                    <button type="button" class="btn btn-primary btn-lg" style="background: #00743f ">Our Work</button>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369004 " onclick="window.location.href= '#OurWork' ">Our Work</button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -48,7 +48,7 @@
                     <h5>
                         Learn more about the developing team
                     </h5>
-                    <button type="button" class="btn btn-primary btn-lg" style="background: #00743f ">About Us</button>
+                    <button type="button" class="btn btn-primary btn-lg" style="background: #369004 " onclick="window.location.href= '#aboutUS'">About Us</button>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
         </center>
     </div>
 
-    <div class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 0rem; align-content: center; padding:2%" >
+    <div id="mapMarker" class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 0rem; align-content: center; padding:2%" >
         <center>
             <h2>
                 TRACKOON Map
@@ -104,7 +104,7 @@
     </div>
     <div id="map" style="position:relative;top:0px;z-index:0;margin-bottom: 10rem"></div>
 
-    <div class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 10rem; align-content: center; padding: 5%" >
+    <div id="aboutUS" class="jumbotron text-jumbo" style="margin-bottom: 0px; margin-top: 10rem; align-content: center; padding: 5%" >
         <center>
             <h2>
                 About Us
@@ -136,7 +136,7 @@
                     <img src="../static/resources/Ericsson-logo-vector.png" alt="" style="width: 100%;">
                 </div>
                 <div class="col-2">
-                    <img src="../static/resources/Owl_Orange.png" alt="" style="width: 100%; height: 70%">
+                    <img src="../static/resources/Owl_Orange.png" alt="" style="width: 85%; height: 70%">
                 </div>
                 <div class="col-2">
                     <img src="../static/resources/sf.png" alt="" style="width: 100%;">
@@ -154,6 +154,12 @@
             It's FOSS!!
         </div>
     </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+
 
     <script>
         var map;
@@ -224,7 +230,7 @@
         }
 
     </script>
-
+    <script src="../static/JavaScript/Script.js"></script>
     <script>
         document.getElementById('close_page').addEventListener('click', function (event) {
             //document.getElementById('container_page').classList.remove('animation');
