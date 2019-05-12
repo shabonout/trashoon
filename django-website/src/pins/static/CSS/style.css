@@ -4,6 +4,10 @@ html, body{
     background-image: url("../resources/baclgroundColour.jpg");
 }
 
+.titles{
+    font-family: "Lato"
+}
+
 #Trashoon{
     font-size: 30px;
 }
