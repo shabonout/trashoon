@@ -4,9 +4,10 @@
 from django.contrib import admin
 from django.urls import path
 
-from pins.views import pins_view
+from pins.views import pins_view,jsontodb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', pins_view)
+    path('', pins_view),
+    path('jsontodb/',jsontodb)
 ]

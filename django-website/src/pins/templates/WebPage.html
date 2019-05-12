@@ -95,17 +95,37 @@
 
             map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-            var arrayMarkers = [];
-
+            var i=0;
+            var arrayMarkers = new Array({{nobjects}});
+            var infowindow = new google.maps.InfoWindow;
             {% for pin in pin_objects %}
-                var marker = new google.maps.Marker({
-                position: {lat: {{ pin.latitude }}, lng: {{ pin.longitude }}},
-                map: map,
-                title: 'Hello World!'
-            });
-            arrayMarkers.push(marker);
+                arrayMarkers[i]=["{{ pin.imgurl }}", {{ pin.latitude }}, {{ pin.longitude }}]; 
+                i++;
             {% endfor %}
-        }
+            
+
+            for(var j=0;j<i;j++){
+                marker = new google.maps.Marker({
+                     position: new google.maps.LatLng(arrayMarkers[j][1], arrayMarkers[j][2]),
+                     map: map
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', (function(marker, j) {
+                     return function() {
+                         infowindow.setContent('<img src="'+arrayMarkers[j][0]+'" widrth=100px height=100px>');
+                         infowindow.open(map, marker);
+                     }
+                })(marker, j));
+
+                google.maps.event.addListener(marker, 'mouseout', (function(marker, j) {
+                     return function() {
+                         infowindow.close(map, marker);
+                     }
+                })(marker, j));
+            }
+
+            }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeXiFwXObyMfJ8N7KXXplkBc4VU0q2zQk&callback=initMap"
             async defer></script>
