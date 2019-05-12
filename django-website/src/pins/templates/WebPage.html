@@ -208,23 +208,21 @@
                      return function() {
                          document.getElementById('container_page').style.visibility = "visible";
                          document.getElementById('details_page').innerHTML=
-                         "<div class=\"titles\"><font size=\"5\">"
+                         "<div class=\"titles\"><font size=\"6\">"
                          +
-                         arrayMarkers[j][3]
+                         "<a href=\""+arrayMarkers[j][5]+"\" onmouseover=\"this.style.textDecoration='underline'; this.style.color='';\" onmouseout=\"this.style.textDecoration='none'; this.style.color='';\">"+arrayMarkers[j][3]+"</a>"
                          +
                          "</font><br><br>"
                          +
                          "<img src=\""+arrayMarkers[j][0]+"\" style=\"max-width:600px;max-height:400px\">"
                          +
-                         "<br>"
+                         "<br><br>"
                          +
                          arrayMarkers[j][4]
                          +
                          "<br><br>"
                          +
-                         arrayMarkers[j][5]
-                         +
-                         "<br><br>"
+                         "<br>"
                          +
                          arrayMarkers[j][6]
                          
