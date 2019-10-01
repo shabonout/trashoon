@@ -1,6 +1,6 @@
 # trashoon
 
-What is Trashoon?
+### What is Trashoon?
 
 Trashoon is a project that four students of the University of Gothenburg created during the CS&E Hackathon 2019
 
@@ -33,7 +33,7 @@ The future of Trashoon is still unknown to this day, there is no certainty for a
 But as our team is engaged in the environmental questions we may continue the development and deploy a stable and working version of Trashoon,
 Stay tuned!
 
-Cheers,
+Cheers,  
 Team Trashoon
 
 
