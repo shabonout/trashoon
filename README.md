@@ -1,5 +1,9 @@
 # trashoon
 
+[Click here to see the video of the Prototype](https://drive.google.com/file/d/1qaXKAESqjJMv9Q4s-LRaUjF4SXY0guSA/view?usp=sharing)
+
+[Click here to see the presentation slides](https://drive.google.com/file/d/1GeB-cGdQXNFeYrBEBISB_FoKUsuFa566/view?usp=sharing)
+
 ### What is Trashoon?
 
 Trashoon is a project that four students of the University of Gothenburg created during the CS&E Hackathon 2019
